@@ -1,0 +1,733 @@
+{
+	"info": {
+		"_postman_id": "5834826e-bdaa-42f6-873f-0ff7b0460f8e",
+		"name": "Hoteles",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hotel",
+			"item": [
+				{
+					"name": "agregarHotel",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGE0YTlhZDI2YTZlYzJlNDhlY2VjYjMiLCJub21icmUiOiJMdWlzIEVucmlxdSIsInVzZXJuYW1lIjoibHVpc2VucmlxdSIsInJvbCI6IlJPTF9IT1RFTCIsImlhdCI6MTYyMTgxMjY0NiwiZXhwIjoxNjIyNjc2NjQ2fQ.PHX1tPlZsL2R6TZDApLxzQw_Y5XFxg8p3VD-4na6AOM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "La Casa Del Pepe",
+									"type": "text"
+								},
+								{
+									"key": "direccion",
+									"value": "zona 4",
+									"type": "text"
+								},
+								{
+									"key": "administrador",
+									"value": "60a4a9ad26a6ec2e48ececb3",
+									"type": "text"
+								},
+								{
+									"key": "rol",
+									"value": "ROL_HOTEL",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/agregarHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"agregarHotel"
+							],
+							"query": [
+								{
+									"key": "rol",
+									"value": "ROL_HOTEL",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Hotel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Barcelo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/buscarHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"buscarHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarHoteles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Barcelo",
+									"type": "text"
+								},
+								{
+									"key": "direccion",
+									"value": "zona 7",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "idAdmin",
+									"value": "60a4a9ad26a6ec2e48ececb3",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/listarHabitaciones",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"listarHabitaciones"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Hotelito",
+									"disabled": true
+								},
+								{
+									"key": "direccion",
+									"value": "zona 7",
+									"disabled": true
+								},
+								{
+									"key": "idAdmin",
+									"value": "60a4a9ad26a6ec2e48ececb3",
+									"disabled": true
+								},
+								{
+									"key": "rol",
+									"value": "ROL_ADMIN",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "bucarUsuarioH",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Hotel",
+									"value": "Westin",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "luisenriqu",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/bucarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"bucarUsuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Pepe",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "pepesote",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "rol",
+									"value": "ROL_USUARIO",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"type": "text"
+								},
+								{
+									"key": "nombre",
+									"value": "Administrador",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "Administrador",
+									"type": "text"
+								},
+								{
+									"key": "getToken",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/login",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"login"
+							],
+							"query": [
+								{
+									"key": "nombre",
+									"value": "Administrador",
+									"disabled": true
+								},
+								{
+									"key": "username",
+									"value": "Administrador",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "123456",
+									"disabled": true
+								},
+								{
+									"key": "rol",
+									"value": "ROL_ADMIN",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerUsuarios",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDk3NzlkNTZhZGE5NDI5OThjN2RiODgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIyMDY0MDcyLCJleHAiOjE2MjI2Njg4NzJ9.KXoVQT2pp22Fsnx0J1Y86PkPi2UbueXA0sRFFKrdKyU",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:27017/api/obtenerUsuarios",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"obtenerUsuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarUsuario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "rol",
+								"value": "ROL_ADMIN",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Luis Enriqu",
+									"type": "text"
+								},
+								{
+									"key": "username",
+									"value": "luisenriqu",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "rol",
+									"value": "ROL_HOTEL",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/agregarUsuario",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"agregarUsuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Eventos",
+			"item": [
+				{
+					"name": "agregarEvento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGE0YTlhZDI2YTZlYzJlNDhlY2VjYjMiLCJub21icmUiOiJMdWlzIEVucmlxdSIsInVzZXJuYW1lIjoibHVpc2VucmlxdSIsInJvbCI6IlJPTF9BRE1JTkhPVEVMIiwiaWF0IjoxNjIxOTAwNTI3LCJleHAiOjE2MjI2NzgxMjd9.BRAAG4DQZ2aMsjbRgqpgvmRltf2_5WOmtkQnsetaX4Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "descripcion",
+									"value": "baile de tuc tuc",
+									"type": "text"
+								},
+								{
+									"key": "tipo",
+									"value": "perreo",
+									"type": "text"
+								},
+								{
+									"key": "nombreHotel",
+									"value": "Westin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/agregarEvento",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"agregarEvento"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reservación",
+			"item": [
+				{
+					"name": "Reservar hotel",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "luisenriqu",
+									"type": "text"
+								},
+								{
+									"key": "hotel",
+									"value": "Westin",
+									"type": "text"
+								},
+								{
+									"key": "habitacion",
+									"value": "Uno",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "nombre",
+									"value": "Luis Enriqu",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/reservarHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"reservarHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "listarReservaciones",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGFkYzA4MjM1NzA0OTQxNjQyM2EzM2IiLCJub21icmUiOiJBbGRhbmFzYSIsInVzZXJuYW1lIjoiYWxkYW5hc2EiLCJyb2wiOiJST0xfVVNVQVJJTyIsImlhdCI6MTYyMjA2MTIxNywiZXhwIjoxNjIyNjY2MDE3fQ.G6zfLhS6huj0YUpm7-EShvhdmkxPKs5zDXRtEu_qATQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:27017/api/listarReservacion",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"listarReservacion"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cancelarReserva",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "60b0056d0528384c409c1429",
+									"type": "text"
+								},
+								{
+									"key": "Habitacion",
+									"value": "Uno",
+									"type": "text"
+								},
+								{
+									"key": "Hotel",
+									"value": "Barcelo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/cancelarReserva",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"cancelarReserva"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Habitaciones",
+			"item": [
+				{
+					"name": "Habitacion disponible",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGE0YTlhZDI2YTZlYzJlNDhlY2VjYjMiLCJub21icmUiOiJMdWlzIEVucmlxdSIsInVzZXJuYW1lIjoibHVpc2VucmlxdSIsInJvbCI6IlJPTF9BRE1JTkhPVEVMIiwiaWF0IjoxNjIyMDY5Mzg1LCJleHAiOjE2MjI2NzQxODV9.W0RE8_kBYjAdBkKbYtPi1EhQZjCcZCy2x899sztQcrk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Estado",
+									"value": "No disponible",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/habitacionDisponible",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"habitacionDisponible"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "habitacionHotel",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "Hotel",
+									"value": "Westin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/habitacionHotel",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"habitacionHotel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgregarHabitacion",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MGE0YTlhZDI2YTZlYzJlNDhlY2VjYjMiLCJub21icmUiOiJMdWlzIEVucmlxdSIsInVzZXJuYW1lIjoibHVpc2VucmlxdSIsInJvbCI6IlJPTF9IT1RFTCIsImlhdCI6MTYyMTgxMjY0NiwiZXhwIjoxNjIyNjc2NjQ2fQ.PHX1tPlZsL2R6TZDApLxzQw_Y5XFxg8p3VD-4na6AOM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Perreo",
+									"type": "text"
+								},
+								{
+									"key": "estado",
+									"value": "Disponible",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "1900",
+									"type": "text"
+								},
+								{
+									"key": "nombreHotel",
+									"value": "Westin",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/agregarHabitacion",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"agregarHabitacion"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servicios",
+			"item": [
+				{
+					"name": "AgregarServicio",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiI2MDk3NzlkNTZhZGE5NDI5OThjN2RiODgiLCJub21icmUiOiJBZG1pbmlzdHJhZG9yIiwidXNlcm5hbWUiOiJBZG1pbmlzdHJhZG9yIiwicm9sIjoiUk9MX0FETUlOIiwiaWF0IjoxNjIyMDk5NDI3LCJleHAiOjE2MjI2MTc4Mjd9.qBB6bo-ju8yFHqERKUtv-g1EnzwUA9wRk05cji_DkqE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "nombre",
+									"value": "Limpieza",
+									"type": "text"
+								},
+								{
+									"key": "hotel",
+									"value": "Westin",
+									"type": "text"
+								},
+								{
+									"key": "precio",
+									"value": "200",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:27017/api/agregarServicio",
+							"host": [
+								"localhost"
+							],
+							"port": "27017",
+							"path": [
+								"api",
+								"agregarServicio"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
